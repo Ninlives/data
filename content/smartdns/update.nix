@@ -1,6 +1,6 @@
-{ lib, git, gnumake, coreutils, gnugrep, gnused, writeShellScript }:
+{ lib, git, gnumake, coreutils, gnugrep, gnused, bash, writeShellScript }:
 writeShellScript "dns" ''
-  export PATH=${lib.makeBinPath [ coreutils gnugrep gnused gnumake git ]}
+  export PATH=${lib.makeBinPath [ coreutils gnugrep gnused gnumake git bash ]}
   # <<<sh>>>
   build_dir=$(mktemp -d)
   here=$(pwd)
